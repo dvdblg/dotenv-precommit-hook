@@ -1,0 +1,8 @@
+- id: dotenv-template
+  name: create .env.template from .env
+  description: This hook creates a .env.template file from .env where all values are replaced with the string "REPLACE_ME"
+  entry: dotenv-template
+  language: python
+  stages: [commit]
+  types: [file]
+  files: \.env$

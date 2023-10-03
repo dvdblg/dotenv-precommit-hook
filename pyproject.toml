@@ -1,0 +1,14 @@
+[project]
+name = "dotenv_template_hook"
+version = "0.0.1"
+description = "A pre-commit-hook to generate a .env.template file from a .env file with values removed"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+dotenv-template = "dotenv_template:create_template"
