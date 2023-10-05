@@ -5,5 +5,5 @@
   language: python
   stages: [commit]
   types: [file]
-  files: \.env$
+  files: .*\.env$
   always_run: true

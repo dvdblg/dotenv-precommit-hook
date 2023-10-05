@@ -9,9 +9,9 @@ def main():
         help='The .env file to read from',
     )
     parser.add_argument(
-        '--env-template-file',
-        default='.env.template',
-        help='The template file to write to',
+        '--template-extension',
+        default='.template',
+        help='The template file extension',
     )
     parser.add_argument(
         '--also-comment',
