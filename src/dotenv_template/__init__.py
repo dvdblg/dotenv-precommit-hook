@@ -22,7 +22,7 @@ def main():
 
     create_template(
         env_file=args.env_file,
-        env_template_file=args.env_template_file,
+        template_extension=args.template_extension,
         also_comment=args.also_comment,
     )
 
