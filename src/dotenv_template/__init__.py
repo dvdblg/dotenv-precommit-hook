@@ -13,7 +13,7 @@ def main():
         action='store_true',
         help='Also comment out the variable names',
     )
-    parser.add_argument('env-files', nargs='*', help='Env files to read from')
+    parser.add_argument('env_files', nargs='*', help='Env files to read from')
     args = parser.parse_args()
     for filename in args.env_files:
         create_template(
