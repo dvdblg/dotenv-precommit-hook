@@ -11,4 +11,4 @@ build-backend = "setuptools.build_meta"
 where = ["src"]
 
 [project.scripts]
-dotenv-template = "dotenv_template:create_template"
+dotenv-template = "dotenv_template:main"

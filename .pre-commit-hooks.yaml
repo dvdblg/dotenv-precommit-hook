@@ -7,7 +7,3 @@
   types: [file]
   files: \.env$
   always_run: true
-  args:
-    - "env_file"
-    - "env_template_file"
-    - "also_comment"
