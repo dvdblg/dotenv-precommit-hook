@@ -11,7 +11,7 @@ def main():
     parser.add_argument(
         '--env-template-file',
         default='.env.template',
-        help='The .env.template file to write to',
+        help='The template file to write to',
     )
     parser.add_argument(
         '--also-comment',
