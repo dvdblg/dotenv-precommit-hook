@@ -1,4 +1,5 @@
 import argparse
+import glob
 from .create_template import create_template
 
 def main():
@@ -13,9 +14,23 @@ def main():
         action='store_true',
         help='Also comment out the variable names',
     )
+    parser.add_argument(
+        '--search-files',
+        action='store_true',
+        help='Search for .env files in the current directory',
+    )
+    parser.add_argument(
+        '--search-pattern',
+        default='*.env',
+        help='Search pattern for .env files',
+    )
     parser.add_argument('env_files', nargs='*', help='Env files to read from')
     args = parser.parse_args()
-    for filename in args.env_files:
+    if args.search_files:
+        files = glob.glob(args.search_pattern, root_dir='.')
+    else:
+        files = args.env_files
+    for filename in files:
         create_template(
             env_file=filename,
             template_extension=args.template_extension,
