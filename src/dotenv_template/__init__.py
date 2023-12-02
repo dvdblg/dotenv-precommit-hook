@@ -1,6 +1,5 @@
 import argparse
-import glob
-import os
+from pathlib import Path
 from .create_template import create_template
 
 def main():
@@ -28,8 +27,7 @@ def main():
     parser.add_argument('env_files', nargs='*', help='Env files to read from')
     args = parser.parse_args()
     if args.search_files:
-        print(f'Searching for {args.search_pattern} in directory {os.getcwd()}')
-        files = glob.glob(args.search_pattern, root_dir='.')
+        files = Path(".").glob(args.search_pattern)
     else:
         files = args.env_files
     for filename in files:
